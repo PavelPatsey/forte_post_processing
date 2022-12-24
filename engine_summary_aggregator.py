@@ -1,8 +1,8 @@
-import os
-from pprint import pprint
 import csv
+import os
 
 DATA_PATH = "."
+PATH_TO_WRITE = "aggregated_engine_summary.csv"
 
 
 def get_files_paths():
@@ -16,54 +16,37 @@ def get_files_paths():
     return files_paths
 
 
-files_paths = get_files_paths()
-# pprint(files_paths)
+def get_data(files_paths):
+    data = []
 
-# формирование первого столбца
-data = []
-with open(files_paths[0], newline="") as csvfile:
-    csv_reader = csv.reader(csvfile, delimiter=",")
-    for row in csv_reader:
-        data.append(row[0:1])
-pprint(data)
+    with open(files_paths[0], newline="") as csvfile:
+        csv_reader = csv.reader(csvfile, delimiter=",")
+        for row in csv_reader:
+            data.append(row[0:1])
 
+    for path in files_paths:
+        with open(path, newline="") as csvfile:
+            csv_reader = csv.reader(csvfile, delimiter=",")
+            i = 0
+            for row in csv_reader:
+                data[i].append(row[-1].strip())
+                i += 1
 
-# чтение
-# with open('./test_data/uov_05/engine_summary.csv', newline='') as csvfile:
-
-#     spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
-
-#     for row in spamreader:
-
-#         print(', '.join(row))
+    return data
 
 
-# запись
-# import csv
+def write_data_to_csv(data):
+    filename = PATH_TO_WRITE
+    with open(filename, "w") as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerows(data)
 
-# # field names
-# fields = ["Name", "Branch", "Year", "CGPA"]
 
-# # data rows of csv file
-# rows = [
-#     ["Nikhil", "COE", "2", "9.0"],
-#     ["Sanchit", "COE", "2", "9.1"],
-#     ["Aditya", "IT", "2", "9.3"],
-#     ["Sagar", "SE", "1", "9.5"],
-#     ["Prateek", "MCE", "3", "7.8"],
-#     ["Sahil", "EP", "2", "9.1"],
-# ]
+def main():
+    files_paths = get_files_paths()
+    data = get_data(files_paths)
+    write_data_to_csv(data)
 
-# # name of csv file
-# filename = "university_records.csv"
 
-# # writing to csv file
-# with open(filename, "w") as csvfile:
-#     # creating a csv writer object
-#     csvwriter = csv.writer(csvfile)
-
-#     # writing the fields
-#     csvwriter.writerow(fields)
-
-#     # writing the data rows
-#     csvwriter.writerows(rows)
+if __name__ == "__main__":
+    main()
