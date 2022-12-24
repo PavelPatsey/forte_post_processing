@@ -1,0 +1,52 @@
+Cylinder Index,                  1
+Engine Bore [cm],           10.50000
+Displacement Volume [cm3],         1108.35389
+Comb. Chamber Volume at TDC [cm3],           67.14192
+Geometric Compression Ratio,           17.50763
+Gross Indicated Work [kJ],            1.31751
+Gross Indicated Power [kW],           25.25222
+IMEP [MPa],            1.18871
+Fuel Mass per Engine Cycle [g],       7.04785E-002
+Fuel Lower Heating Value per g [kJ],           44.07315
+Gross ISFC per kW-h [g],          192.57793
+ISFC (IVC->EVO) per kW-h [g],          206.71737
+Combustion Efficiency,            1.00000
+Thermal Efficiency,            0.42415
+Max Pressure [MPa],           24.13900
+Max Temperature [K],         2382.00701
+Max Pressure Rise Rate per CA deg [MPa],            8.07196
+Total Chemical Heat Release [J],         3440.02934
+Total Wall Heat Transfer Loss [J],         1068.40377
+Cooling Loss Ratio,       3.10580E-001
+Total Apparent Heat Release (Chemical - Heat Loss) [J],         2371.62557
+Total Apparent Heat Release (From PV With Variable Gamma) [J],         2512.83114
+Total Apparent Heat Release (From PV With Constant Gamma) [J],         2240.66896
+Degree of Constant Volume (Apparent),            1.02349
+Degree of Constant Volume (Burning),            0.95452
+Degree of Constant Volume (Cooling),            0.91295
+CA ATDC @ 2% Heat Release [deg],          703.65600
+CA ATDC @ 10% Heat Release [deg],          704.13900
+CA ATDC @ 30% Heat Release [deg],          706.14000
+CA ATDC @ 50% Heat Release [deg],          708.55500
+CA ATDC @ 90% Heat Release [deg],          711.45300
+10%-90% Heat Release Duration [deg],            7.31400
+Soot @ EVO [g],       0.00000E+000
+Soot @ EVO per kg-fuel [g],       0.00000E+000
+Soot @ EVO per kW-h [g],       0.00000E+000
+Soot @ EVO in ppm,       0.00000E+000
+EINOx @ EVO [g],       2.70819E-002
+EINOx @ EVO per kg-fuel [g],       3.84257E+002
+EINOx @ EVO per kW-h [g],       7.39995E+001
+EINOx @ EVO in ppm,       7.05571E+003
+CO @ EVO [g],       2.06574E-007
+CO @ EVO per kg-fuel [g],       2.93102E-003
+CO @ EVO per kW-h [g],       5.64449E-004
+CO @ EVO in ppm,       8.83946E-002
+UHC @ EVO [g],       1.47796E-012
+UHC @ EVO per kg-fuel [g],       2.09703E-008
+UHC @ EVO per kW-h [g],       4.03842E-009
+UHC @ EVO in ppm C1-UHC,       1.38363E-006
+VOC @ EVO [g],       4.09369E-006
+VOC @ EVO per kg-fuel [g],       5.80842E-002
+VOC @ EVO per kW-h [g],       1.11857E-002
+VOC @ EVO in ppm C1-VOC,       2.30676E+000
