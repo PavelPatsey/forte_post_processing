@@ -18,6 +18,11 @@ def get_files_paths():
 
 def get_data(files_paths):
     data = []
+    data.append(
+        [
+            "name",
+        ]
+    )
 
     with open(files_paths[0], newline="") as csvfile:
         csv_reader = csv.reader(csvfile, delimiter=",")
@@ -27,7 +32,9 @@ def get_data(files_paths):
     for path in files_paths:
         with open(path, newline="") as csvfile:
             csv_reader = csv.reader(csvfile, delimiter=",")
-            i = 0
+            name = path.strip().split("/")[-2]
+            data[0].append(f"{name}")
+            i = 1
             for row in csv_reader:
                 data[i].append(row[-1].strip())
                 i += 1
